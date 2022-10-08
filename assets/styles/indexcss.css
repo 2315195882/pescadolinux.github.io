@@ -1,0 +1,571 @@
+@charset "utf-8";
+
+html, body {
+	overflow-x: hidden;
+	background-color: #000;
+	color: #fff;
+}
+
+html.no_scroll{
+	overflow: hidden;
+}
+
+h1 {
+	color: #fff;
+}
+
+h2 {
+	color: #fff;
+}
+
+h3 {
+	color: #fff;
+}
+
+h4 {
+	color: #fff;
+}
+
+h5 {
+	color: #fff;
+}
+
+h6 {
+	color: #fff;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+	margin: 10px;
+}
+th, td {
+  padding: 5px;
+  border: 1px solid #f1f1f1;
+}
+th {
+  background-color: #2c88d9;
+  color: #FFF;
+}
+
+#splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+		top: 0;
+    text-align: center;
+    color: #fff
+}
+
+.LoadingLogo {
+	width: 10%;
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	z-index: 9999;
+	transform: translate(-50%,-50%);
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.LoadingLogoShow {
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%,-300%);
+	opacity: 1;
+}
+
+#splash_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%,-50%);
+    width: 100%
+		display: inline-block;
+		background: linear-gradient(235deg, #00a8ff, #008b5e);
+		background: -webkit-linear-gradient(235deg, #00a8ff, #008b5e);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+}
+
+.progressbar-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%,-50%);
+    width: 100%;
+		display: inline-block;
+		background: linear-gradient(235deg, #00a8ff, #008b5e);
+		background: -webkit-linear-gradient(235deg, #00a8ff, #008b5e);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+}
+
+#splash_text svg {
+    height: 2px
+}
+
+.loader_cover {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transition: all 1s cubic-bezier(.04,.435,.315,.9);
+}
+
+.coveranime {
+		transform: translateY(-100%);
+}
+
+#container {
+	position: relative;
+	top: 0;
+	width:100%;
+	height: 100%;
+	z-index: 1;
+	backdrop-filter: blur(10px);
+}
+
+/*====== 9-1-1 縦線が動いてスクロールを促す =======*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown1{
+    /*描画位置※位置は適宜調整してください*/
+	position:absolute;
+	left:50%;
+	transform: translateX(-50%);
+	bottom:10px;
+    /*全体の高さ*/
+	height:50px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown1 span{
+    /*描画位置*/
+	position: absolute;
+	left:-15px;
+	top: -20px;
+    /*テキストの形状*/
+	color: #fff;
+	font-size: 200%;
+	letter-spacing: 0.05em;
+	transform: rotateZ(90deg) scaleY(2);
+	animation: pathmove 1.4s ease-in-out infinite;
+	opacity:0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove{
+	0%{
+		top:0;
+		opacity: 0;
+	}
+	30%{
+		opacity: 1;
+	}
+	100%{
+		top:50px;
+		opacity: 0;
+	}
+}
+
+/* 左から */
+
+.fadeLeft {
+	animation-name: fadeLeftAnime;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+@keyframes fadeLeftAnime {
+	from {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.maintextright {
+	margin: 0 0 0 100px;
+	font-size: 2vh;
+}
+
+.subtextright {
+	height: 20em;
+	letter-spacing: 0.1em;
+	text-align: left;
+	padding-top: 15%;
+	left: 20%;
+	font-weight: 500;
+}
+
+#SaikounoDesign {
+	position: relative;
+	background-color:#191919;
+	padding: 70px 70px;
+}
+
+#SaikounoDesign h2 {
+	position: absolute;
+	left: 20%;
+	z-index: 2;
+	font-size: 3vh;
+}
+
+.SaikounoDesign {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+}
+
+.Logo-img {
+	background: url("https://www.pescadogames.com/assets/icons/PGBlueLogo-toumei.png") no-repeat center;
+	background-size: contain;
+	height: 50vh;
+	width: 48%;
+	right: 0;
+}
+
+@media screen and (max-width:430px) {
+	.Logo-img {
+		height: 20vh;
+	}
+}
+
+@media screen and (max-width:800px) {
+	#SaikounoDesign {
+		padding: 10% 30px;
+	}
+
+		#SaikounoDesign h2 {
+			position: relative;
+			left: auto;
+		}
+
+		.subtextright {
+			margin: 50px 0 0 0;
+			-ms-writing-mode: lr-tb;
+			-webkit-writing-mode: horizontal-tb;
+			writing-mode: horizontal-tb;
+			text-orientation: upright;
+			height: auto;
+			letter-spacing: 0.1em;
+			padding: 0 0;
+			text-align: left;
+		}
+
+	.Logo-img {
+		width: 100%;
+	}
+
+	.Logo-img {
+		height: 40vh;
+	}
+}
+
+#LinuxNoKakutyousei {
+	position: relative;
+	padding: 70px 70px;
+}
+
+#LinuxNoKakutyousei h2 {
+	position: absolute;
+	left: 20%;
+	z-index: 2;
+	font-size: 3vh;
+}
+
+
+.LinuxNoKakutyousei {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+}
+
+.PlLogo-img {
+	background: url("../../assets/image/Linux.png") no-repeat center;
+	height: 50vh;
+	width: 48%;
+	right: 0;
+}
+
+@media screen and (max-width:430px) {
+	.PlLogo-img {
+		height: 20vh;
+	}
+}
+
+@media screen and (max-width:800px) {
+	#LinuxNoKakutyousei {
+		padding: 10% 30px;
+	}
+
+		#LinuxNoKakutyousei h2 {
+			position: relative;
+			left: auto;
+		}
+
+		.subtextright {
+			margin: 50px 0 0 0;
+			-ms-writing-mode: lr-tb;
+			-webkit-writing-mode: horizontal-tb;
+			writing-mode: horizontal-tb;
+			text-orientation: upright;
+			height: auto;
+			letter-spacing: 0.1em;
+			padding: 0 0;
+			text-align: left;
+		}
+
+	.PlLogo-img {
+		width: 100%;
+		height: 40vh;
+	}
+}
+
+#JapaneseForYou {
+	position: relative;
+	background-color:#191919;
+	padding: 70px 70px;
+}
+
+#JapaneseForYou h2 {
+	position: absolute;
+	left: 20%;
+	z-index: 2;
+	font-size: 3vh;
+}
+
+.JapaneseForYousubtextright {
+	height: 20em;
+	letter-spacing: 0.1em;
+	text-align: left;
+	padding-top: 10%;
+	left: 20%;
+  font-weight: 500;
+}
+
+.JapaneseForYou {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+}
+
+.Lang-img {
+	background: url("../../assets/image/Language.png") no-repeat center;
+	background-size: contain;
+	height: 50vh;
+	width: 48%;
+	right: 0;
+}
+
+@media screen and (max-width:430px) {
+	.Lang-img {
+		height: 20vh;
+	}
+}
+
+.KDEConnectLogo-img {
+	background: url("../../assets/image/KDEConnect.png") no-repeat center;
+	background-size: contain;
+	height: 50vh;
+	width: 48%;
+	right: 0;
+}
+
+@media screen and (max-width:430px) {
+	.KDEConnectLogo-img {
+		height: 20vh;
+	}
+}
+
+@media screen and (max-width:800px) {
+
+	#JapaneseForYou {
+		padding: 10% 30px;
+	}
+
+		#JapaneseForYou h2 {
+			position: relative;
+			left: auto;
+		}
+
+		.JapaneseForYousubtextright {
+			margin: 50px 0 0 0;
+			-ms-writing-mode: lr-tb;
+			-webkit-writing-mode: horizontal-tb;
+			writing-mode: horizontal-tb;
+			text-orientation: upright;
+			height: auto;
+			letter-spacing: 0.1em;
+			padding: 0 0;
+			text-align: left;
+		}
+
+  .Lang-img {
+		width: 100%;
+		height: 40vh;
+	}
+	.KDEConnectLogo-img {
+		width: 100%;
+		height: 40vh;
+	}
+}
+
+#SpecSeet {
+	position: relative;
+	background-color:#191919;
+	padding: 70px 70px;
+}
+
+.SpecSeet {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+}
+
+#Download {
+	position: relative;
+	padding: 70px 70px;
+}
+
+.Download {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+}
+
+.maintext {
+	text-align: center;
+}
+
+.dousakakuninzumi {
+	margin: 10px;
+	font-weight: 500;
+}
+
+.contactarea {
+  width: 500px;
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.tab_class {
+  width: calc(100%/5);
+  height: 50px;
+  background-color: darkgrey;
+  line-height: 50px;
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  float: left;
+  order: -1;
+}
+
+input[name="tab_name"] {
+  display: none;
+}
+
+input:checked + .tab_class {
+  background-color: cadetblue;
+  color: aliceblue;
+}
+
+.content_class {
+  display: none;
+  width: 100%;
+}
+
+input:checked + .tab_class + .content_class {
+  display: block;
+}
+
+.slider {
+	top: 0;
+	z-index: -1;
+	position: absolute;
+}
+
+.topimage{
+  width:100%;
+  height: 100vh;
+}
+
+.topimage:before{
+  content: '';
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:0;
+  width:100%;
+  height: 100vh;
+  /*背景画像設定*/
+  background:url("../../assets/image/background.png") no-repeat center;
+  background-size:cover;
+	overflow: hidden;
+	filter: blur(5px);
+}
+
+.topimageh1 {
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	color: white;
+	FONT-WEIGHT: 500;
+	text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
+	font-size: 500%;
+}
+
+@media screen and (max-width:800px) {
+	.topimage {
+		height: 100vh;
+		position: static;
+	}
+	.topimageh1{
+		top: 100px;
+		left: 0;
+		font-size: 300%;
+	}
+}
+
+@media screen and (max-width:400px) {
+	.topimage {
+		height: 100vh;
+		position: static;
+	}
+	.topimageh1{
+		top: 100px;
+		left: 0;
+		font-size: 200%;
+	}
+}
+
+.tell {
+	background: -webkit-linear-gradient(348deg,#0034c5, #8800a5);
+	position: fixed;
+	bottom: 5%;
+	right: 0;
+	z-index: 3;
+	padding: 1% 0;
+}
+
+.tell h3{
+-ms-writing-mode: tb-rl;
+-webkit-writing-mode: vertical-rl;
+writing-mode: vertical-rl;
+text-orientation: upright;
+letter-spacing: 0.1em;
+}
