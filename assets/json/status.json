@@ -1,0 +1,22 @@
+{
+    "$comment": "↓Website",
+    "githubpagesstatus": "act",
+    "githubpagesproblempage": "",
+    "displaystatus": "pro",
+    "displayproblempage": "https://status.pescadogames.com/problem/202212252100F0A0BE53E7.html",
+
+    "$comments": "↓PescadoGamesLauncher",
+    "pescadogameslauncherstatus": "pro",
+    "serverstatus": "pro",
+    "websiteviewstatus": "act",
+
+    "$commentss": "↓PescadoGamesLauncher",
+    "pgbotserverstatus": "pro",
+    "pgbotserverproblempage": "https://status.pescadogames.com/problem/20228251140D6AF416C9A.html",
+    "pgbotrepository": "act",
+    "pgbotrepositoryproblempage": "https://status.pescadogames.com/problem/20228251140D6AF416C9A.html",
+    "pgbotresponse": "pro",
+    "pgbotresponseproblempage": "https://status.pescadogames.com/problem/20228251140D6AF416C9A.html",
+    "pgbotgbc": "pro",
+    "pgbotgbcproblempage": "https://status.pescadogames.com/problem/20228251140D6AF416C9A.html"
+}
