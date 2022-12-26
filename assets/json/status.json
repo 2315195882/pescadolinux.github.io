@@ -5,18 +5,19 @@
     "displaystatus": "pro",
     "displayproblempage": "https://status.pescadogames.com/problem/202212252100F0A0BE53E7.html",
 
-    "$comments": "↓PescadoGamesLauncher",
-    "pescadogameslauncherstatus": "pro",
-    "serverstatus": "pro",
-    "websiteviewstatus": "act",
-
-    "$commentss": "↓PescadoGamesLauncher",
+    "$commentss": "↓PescadoGamesBOT",
     "pgbotserverstatus": "pro",
     "pgbotserverproblempage": "https://status.pescadogames.com/problem/20228251140D6AF416C9A.html",
     "pgbotrepository": "act",
-    "pgbotrepositoryproblempage": "https://status.pescadogames.com/problem/20228251140D6AF416C9A.html",
+    "pgbotrepositoryproblempage": "",
     "pgbotresponse": "pro",
     "pgbotresponseproblempage": "https://status.pescadogames.com/problem/20228251140D6AF416C9A.html",
     "pgbotgbc": "pro",
-    "pgbotgbcproblempage": "https://status.pescadogames.com/problem/20228251140D6AF416C9A.html"
+    "pgbotgbcproblempage": "https://status.pescadogames.com/problem/20228251140D6AF416C9A.html",
+
+    "$comments": "↓PescadoGamesLauncher",
+    "serverstatus": "pro",
+    "serverproblempage": "https://status.pescadogames.com/problem/2022121000C9F88091B2.html",
+    "websiteviewstatus": "act",
+    "websiteviewsproblempage": ""
 }
