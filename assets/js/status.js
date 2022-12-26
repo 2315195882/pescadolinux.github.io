@@ -1,4 +1,4 @@
-url = `../assets/json/status.json`;
+url = `https://linux.pescadogames.com/assets/json/status.json`;
 act = "act";
 pro = "pro";
 
@@ -207,7 +207,7 @@ $.getJSON(url, (data) => {
         }
         else if (data.pescadogameslauncherstatus == "pro") {
             var elem = document.getElementById('statusmark');
-            elem.src = "../assets/image/StatusWarning.svg";
+            elem.src = "https://linux.pescadogames.com/assets/image/StatusWarning.svg";
             var elm = document.getElementById('statustext');
             elm.textContent = statusallproblem;
             $('.nowstatus').addClass('allok');
@@ -215,7 +215,7 @@ $.getJSON(url, (data) => {
         }
         else {
             var elem = document.getElementById('statusmark');
-            elem.src = "../assets/image/StatusDenger.svg";
+            elem.src = "https://linux.pescadogames.com/assets/image/StatusDenger.svg";
             var elm = document.getElementById('statustext');
             elm.textContent = statusallproblem;
             $('.nowstatus').addClass('allok');
@@ -224,7 +224,7 @@ $.getJSON(url, (data) => {
     }
     else if (data.websitestatus == "pro") {
         var elem = document.getElementById('statusmark');
-        elem.src = "../assets/image/StatusWarning.svg";
+        elem.src = "https://linux.pescadogames.com/assets/image/StatusWarning.svg";
         var elm = document.getElementById('statustext');
         elm.textContent = statusallproblem;
         $('.nowstatus').addClass('allok');
@@ -232,7 +232,7 @@ $.getJSON(url, (data) => {
     }
     else {
         var elem = document.getElementById('statusmark');
-        elem.src = "../assets/image/StatusDenger.svg";
+        elem.src = "https://linux.pescadogames.com/assets/image/StatusDenger.svg";
         var elm = document.getElementById('statustext');
         elm.textContent = statusallproblem;
         $('.nowstatus').removeClass('allok');
